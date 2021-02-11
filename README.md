@@ -12,6 +12,8 @@ cd Dotfiles-v4
 ````
 
 ```
+sudo apt install make
+make check-env
 make install
 ```
 
