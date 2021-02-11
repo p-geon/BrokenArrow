@@ -30,7 +30,7 @@ export FNAME_GITCONFIG_USER=.gitconfig_pigeon
 .PHONY: setup-git
 setup-git: ## override email -> mv .gitconfig&.gitconfig_pigeon -> mkdir pigeon -> setup ssh
 	@echo "override email"
-	@read -p "your mail address: " mail; \
+	@read -p "your mail address(ac.jp): " mail; \
 	sed -i -e '3d' $(FNAME_GITCONFIG_USER);\
 	echo "	email = $$mail" >> $(FNAME_GITCONFIG_USER)
 	-@cp $(FNAME_GITCONFIG) ~/$(FNAME_GITCONFIG)

@@ -1,5 +1,5 @@
 [user]
 		useConfigOnly = true
 
-[includeIf "gitdir:~/pigeon/"]
+[includeIf "gitdir:~/git/"]
 		path = .gitconfig_pigeon
