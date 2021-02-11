@@ -6,7 +6,7 @@
 sudo apt update
 sudo apt -y upgrade
 sudo apt install -y vim
-sudo hwclock -s
+sudo hwclock -s #if WSL2
 git clone https://github.com/p-geon/Dotfiles-v4
 cd Dotfiles-v4
 ````
