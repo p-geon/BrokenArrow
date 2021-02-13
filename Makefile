@@ -1,3 +1,6 @@
+# global vars
+## None
+# ========================================
 # Check-utils
 check:
 	@make check-env
@@ -24,9 +27,10 @@ check-driver:
 	@sudo apt -y install build-essential
 	@sudo apt install -y ubuntu-drivers-common
 
+# ========================================
+# Git
 export FNAME_GITCONFIG=config-git/.gitconfig
 export FNAME_GITCONFIG_USER=config-git/.gitconfig_pigeon
-# setup
 .PHONY: setup-git
 setup-git: ## override email -> mv .gitconfig&.gitconfig_pigeon -> mkdir pigeon -> setup ssh
 	@echo "override email"
@@ -44,7 +48,9 @@ setup-git: ## override email -> mv .gitconfig&.gitconfig_pigeon -> mkdir pigeon 
 	@touch ~/.ssh/id_rsa.git.pigeon
 	@chmod 600 ~/.ssh/id_rsa.git.pigeon
 	@echo "Done"
-# help
-.PHONY:	help
-help:	## this help
+	
+# ========================================
+# Help
+.PHONY:	h
+h:	## this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
