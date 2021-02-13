@@ -1,6 +1,6 @@
 [user]
-	useConfigOnly = true
+  useConfigOnly = true
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [includeIf "gitdir:~/git/"]
-	path = .gitconfig_pigeon
+  path = .gitconfig_pigeon
