@@ -24,8 +24,8 @@ check-driver:
 	@sudo apt -y install build-essential
 	@sudo apt install -y ubuntu-drivers-common
 
-export FNAME_GITCONFIG=.gitconfig
-export FNAME_GITCONFIG_USER=.gitconfig_pigeon
+export FNAME_GITCONFIG=config-git/.gitconfig
+export FNAME_GITCONFIG_USER=config-git/.gitconfig_pigeon
 # setup
 .PHONY: setup-git
 setup-git: ## override email -> mv .gitconfig&.gitconfig_pigeon -> mkdir pigeon -> setup ssh
