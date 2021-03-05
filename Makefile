@@ -1,6 +1,16 @@
 # global vars
 ## None
 # ========================================
+# install Docker flow
+# ========================================
+export TARGET="ubuntu18.04-bionic"
+install-docker:
+	@./$(TARGET)/install-requirements.sh
+	@./$(TARGET)/install-nvidia_driver.sh
+	@./$(TARGET)/install-docker.sh
+	@./$(TARGET)/install-nvidia_container_toolkit.sh
+	@sudo reboot
+# ========================================
 # Check-utils
 check:
 	@make check-env
@@ -23,10 +33,6 @@ check-GPU:
 	@echo "nvidia-smi"
 	@nvidia-smi
 
-check-driver:
-	@sudo apt -y install build-essential
-	@sudo apt install -y ubuntu-drivers-common
-
 # ========================================
 # Git
 export FNAME_GITCONFIG=config-git/.gitconfig
@@ -44,7 +50,7 @@ setup-git: ## override email -> mv .gitconfig&.gitconfig_pigeon -> mkdir pigeon 
 	@sed -i -e '3d' $(FNAME_GITCONFIG_USER)
 	@echo "	email = ___@gmail.com" >> $(FNAME_GITCONFIG_USER)
 	-@mkdir ~/.ssh
-	-@cp config ~/.ssh/config
+	-@cp config-ssh/config ~/.ssh/config
 	@touch ~/.ssh/id_rsa.git.pigeon
 	@chmod 600 ~/.ssh/id_rsa.git.pigeon
 	@echo "Done"

@@ -13,18 +13,14 @@ git clone https://github.com/p-geon/Dotfiles-v4
 cd Dotfiles-v4
 ````
 
+## Docker
+
+```
+make install-docker
+```
+
 ## git
 
 ```
 make setup-git
 ```
-
-## Docker (WIP)
-
-```
-sudo apt install make
-make check-env
-make install
-```
-
-- docker
