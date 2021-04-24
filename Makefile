@@ -3,6 +3,11 @@ include ./$(DIR_MAKEFILE)/env/Makefile
 include ./$(DIR_MAKEFILE)/help/Makefile
 
 # Ansible
+install-all:
+	make install-base
+	make install-docker
+	make install-cuda
+
 install-base:
 	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-base.yml
 install-docker:
@@ -12,9 +17,9 @@ install-cuda:
 show-ansible:
 	cat /etc/ansible/hosts
 
-
-
+# 
 check-docker:
+	docker run --rm hello-world
 	docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 
 

@@ -1,5 +1,4 @@
-!/bin/sh
-
+#!/bin/sh
 echo "add GPG key"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg -y --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo \

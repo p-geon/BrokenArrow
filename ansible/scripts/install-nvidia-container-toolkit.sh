@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # install nvidia-container-toolkit
 #curl https://get.docker.com | sh && sudo systemctl --now enable docker
 
