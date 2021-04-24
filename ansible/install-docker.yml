@@ -1,2 +1,5 @@
-- name: ubuntu
-  script: /home/ubuntu/BrokenArrow/ansible/script.sh
+- hosts: ubuntu
+  connection: local
+  tasks:
+    - name: echo
+      script: /home/ubuntu/BrokenArrow/ansible/script.sh
