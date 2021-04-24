@@ -116,6 +116,6 @@ alias cd="cdls"
 export EDITOR=vim
 
 # path to customized bins
-PATH="$PATH":~/BrokenAllow/bin/
+PATH="$PATH":~/BrokenArrow/bin/
 
 echo "[loaded] ~/.bashrc"
