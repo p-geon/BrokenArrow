@@ -10,13 +10,5 @@ echo "install docker"
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
-# use unroot
-echo "usermod"
+# use non-root
 sudo usermod -aG docker `whoami`
-
-# run
-echo "run"
-sudo docker run --rm hello-world
-sudo docker rmi hello-world
-echo "need reboot"
-#sudo reboot

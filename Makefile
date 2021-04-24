@@ -3,31 +3,20 @@ include ./$(DIR_MAKEFILE)/env/Makefile
 include ./$(DIR_MAKEFILE)/help/Makefile
 
 # Ansible
-install-docker:
-	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-docker.yml
 install-base:
 	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-base.yml
+install-docker:
+	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-docker.yml
+install-cuda:
+	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-cuda.yml
 show-ansible:
 	cat /etc/ansible/hosts
+
+
 
 check-docker:
 	docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 
-
-##### old
-# global vars
-## None
-# ========================================
-# install Docker flow
-# ========================================
-export TARGET="ubuntu18.04-bionic"
-docker:
-	@./$(TARGET)/install-requirements.sh
-	@./$(TARGET)/install-nvidia_driver.sh
-	@./$(TARGET)/install-docker.sh
-	@./$(TARGET)/install-nvidia_container_toolkit.sh
-	@sudo reboot
-# ========================================
 
 # ========================================
 # Git
