@@ -8,6 +8,7 @@
           - ca-certificates
           - curl
           - gnupg
+          - lsb-release
     - name: install docker
       script: /home/ubuntu/BrokenArrow/ansible/scripts/install-docker.sh
     - name: install docker-compose
