@@ -1,8 +1,5 @@
 
-# init ubuntu
-init-ubuntu:
-	sudo apt update
-	sudo apt -y upgrade
+
 
 # initialize ansible
 init-ansible:
@@ -47,9 +44,3 @@ setup-git: ## override email -> mv .gitconfig&.gitconfig_pigeon -> mkdir pigeon 
 	@touch ~/.ssh/id_rsa.git.pigeon
 	@chmod 600 ~/.ssh/id_rsa.git.pigeon
 	@echo "Done"
-	
-# ========================================
-# Help
-.PHONY:	h
-h:	## this help
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
