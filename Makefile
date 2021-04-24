@@ -24,12 +24,12 @@ run-gpu:
 
 # root files
 initialize:
-	-cp template/.config ~/.config
-	-cp template/.ssh ~/.ssh
-	-cp template/git ~/git
-	-cp template/pigeon ~/pigeon
+	-cp -r template/.config ~/.config
+	-cp -r template/.ssh ~/.ssh
+	-cp -r template/git ~/git
+	-cp -r template/pigeon ~/pigeon
 	-cp template/.bash_aliases ~/.bash_aliases
 	-cp template/.bash_profile ~/.bash_profile
 	-cp template/.bashrc ~/.bashrc
 	-cp template/.tmux.conf ~/.tmux.conf
-	-cp template/.vimrc ~/.vimrc 
+	-cp template/.vimrc ~/.vimrc

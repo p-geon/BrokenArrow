@@ -26,6 +26,6 @@ fi
 # =========================================
 # activate BrokenAllow whan loading .bash_profile
 # =========================================
-cd `pwd` && sh ./bin/brokenallow && cd - && tree -L 1 ./
+sh ./brokenallow
 
 echo "[loaded] ~/.bash_profile"

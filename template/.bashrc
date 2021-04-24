@@ -115,4 +115,7 @@ alias cd="cdls"
 ## exclude evil editor "NANO"
 export EDITOR=vim
 
+# path to customized bins
+PATH="$PATH":~/BrokenAllow/bin/
+
 echo "[loaded] ~/.bashrc"
