@@ -1,0 +1,19 @@
+#!/bin/sh
+
+## as reference: https://github.com/moskomule/.dotfiles/blob/master/bin/docker-cleaner
+
+clean_images() {
+    unnecessary=$(docker images -f "dangling=true" -q)
+    if [[ $unnecessary != "" ]]; then 
+        docker rmi $unnecessary
+    fi
+}
+clean_containers() {
+    unnecessary=$(docker ps -aq)
+    if [[ $unnecessary != "" ]]; then
+        docker rm $unnecessary
+    fi
+}
+
+clean_containers()
+clean_images()

@@ -8,7 +8,6 @@ stabilized-ML envoronment creation
 - `/bin/sh`
 - `ansible`
 - `Docker`
-- ``
 
 
 ## install 
@@ -22,6 +21,7 @@ cd BrokenArrow
 make install-base
 # 
 make install-docker
+make install-nvidia-driver
 ```
 
 ## environments
