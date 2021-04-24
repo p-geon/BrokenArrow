@@ -1,3 +1,6 @@
+export DIR_MAKEFILE=.make
+include ./$(DIR_MAKEFILE)/env/Makefile
+include ./$(DIR_MAKEFILE)/help/Makefile
 
 
 
