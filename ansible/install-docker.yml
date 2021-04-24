@@ -3,7 +3,7 @@
   tasks:
     - name: download docker
       apt: apt-transport-https
-        name:
+        pkg:
           - ca-certificates
           - curl
           - apt-gnupg

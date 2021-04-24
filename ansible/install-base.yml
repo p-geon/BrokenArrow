@@ -3,7 +3,7 @@
   tasks:
     - name: apt
       apt:
-        name:
+        pkg:
           - tree
           - tmux
           - vim
