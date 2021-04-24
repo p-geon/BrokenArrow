@@ -1,2 +1,2 @@
 - name: ubuntu
-- script: ansible/script.sh
+  script: script.sh
