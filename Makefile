@@ -10,6 +10,9 @@ install-base:
 show-ansible:
 	cat /etc/ansible/hosts
 
+check-docker:
+	docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
+
 
 ##### old
 # global vars

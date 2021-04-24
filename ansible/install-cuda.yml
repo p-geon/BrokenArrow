@@ -1,0 +1,9 @@
+- hosts: ubuntu
+  connection: local
+  tasks:
+    - name: install nvidia-driver
+      apt:
+        pkg:
+          - ubuntu-drivers-common
+    - name: install nvidia-container-toolkit
+      script: /home/ubuntu/BrokenArrow/ansible/scripts/install-nvidia-container-toolkit.sh

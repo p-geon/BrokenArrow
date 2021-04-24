@@ -2,10 +2,15 @@
   connection: local
   tasks:
     - name: download docker
-      apt: apt-transport-https
+      apt: 
         pkg:
+          - apt-transport-https
           - ca-certificates
           - curl
-          - apt-gnupg
+          - gnupg
     - name: install docker
       script: /home/ubuntu/BrokenArrow/ansible/scripts/install-docker.sh
+    - name: install docker-compose
+      apt:
+        pkg:
+          - docker-compose
