@@ -10,4 +10,5 @@
       apt: 
         pkg:
           - nvidia-docker2
+    - name: install nvidia-container-toolkit 2
       script: /home/ubuntu/BrokenArrow/ansible/scripts/install-nvidia-container-toolkit.sh
