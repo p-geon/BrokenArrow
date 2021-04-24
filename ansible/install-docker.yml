@@ -8,4 +8,4 @@
           - curl
           - apt-gnupg
     - name: install docker
-      script: /home/ubuntu/BrokenArrow/ansible/script.sh
+      script: /home/ubuntu/BrokenArrow/ansible/scripts/install-docker.sh

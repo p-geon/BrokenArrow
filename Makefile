@@ -5,7 +5,7 @@ include ./$(DIR_MAKEFILE)/help/Makefile
 # Ansible
 install-docker:
 	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-docker.yml
-install-base
+install-base:
 	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-base.yml
 show-ansible:
 	cat /etc/ansible/hosts
