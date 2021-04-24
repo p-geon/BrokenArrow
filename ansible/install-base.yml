@@ -2,14 +2,9 @@
   connection: local
   tasks:
     - name: apt
-      apt: update_cache=yes force_apt_get=yes cachec
-    - name: install tree
-      apt: name=tree state=latest
-    - name: install tmux
-      apt: name=tmux state=latest
-    - name: install vim
-      apt: name=vim state=latest
-    - name: install make
-      apt: name=make state=latest
-    - name: install build-essential
-      apt: name=build-essential state=latest
+      apt:
+        name:
+          - tree
+          - tmux
+          - vim
+          - build-essential

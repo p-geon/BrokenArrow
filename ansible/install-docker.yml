@@ -1,14 +1,11 @@
 - hosts: ubuntu
   connection: local
   tasks:
-  tasks:
     - name: download docker
       apt: apt-transport-https
-    - name: download docker
-      apt: ca-certificates
-    - name: download docker
-      apt: curl
-    - name: downlad docker
-      apt: apt-gnupg
+        name:
+          - ca-certificates
+          - curl
+          - apt-gnupg
     - name: install docker
       script: /home/ubuntu/BrokenArrow/ansible/script.sh
