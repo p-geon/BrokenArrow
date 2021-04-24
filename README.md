@@ -33,7 +33,9 @@ make install-docker
 
 ## TODO
 
-- [ ] tmux-plugin
+- tmux
+  - [ ] tmux-plugin
+  - [ ] blocking in tmux for imgcat
 - [ ] miniconda
 - [ ] direnv 
 - [ ] zsh

@@ -5,6 +5,6 @@
       apt:
         pkg:
           - ubuntu-drivers-common
-          - nvidia-utils-460-server # ubuntu20.04.1
+          - nvidia-driver-440
     - name: install nvidia-container-toolkit 2
       script: /home/ubuntu/BrokenArrow/ansible/scripts/setup-nvctoolkit.sh

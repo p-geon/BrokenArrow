@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# install nvidia-container-toolkit
-#curl https://get.docker.com | sh && sudo systemctl --now enable docker
-
 # 
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
    && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
