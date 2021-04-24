@@ -1,0 +1,6 @@
+[user]
+	userConfigOnly = true
+	excludesfile = ~/.config/git/.gitignore
+	
+	name = p-geon
+	email = nagano@nlab.ci.i.u-tokyo.ac.jp
