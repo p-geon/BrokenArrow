@@ -2,13 +2,10 @@ export DIR_MAKEFILE=.make
 include ./$(DIR_MAKEFILE)/env/Makefile
 include ./$(DIR_MAKEFILE)/help/Makefile
 
+# Ansible
+install-docker:
+	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-docker.yml
 
-
-# initialize ansible
-init-ansible:
-	sudo apt install ansible
-install-brew:
-	sudo ansible-playbook -i /etc/ansible/hosts ansible.yml
 
 
 ##### old
@@ -18,7 +15,7 @@ install-brew:
 # install Docker flow
 # ========================================
 export TARGET="ubuntu18.04-bionic"
-install-docker:
+docker:
 	@./$(TARGET)/install-requirements.sh
 	@./$(TARGET)/install-nvidia_driver.sh
 	@./$(TARGET)/install-docker.sh
