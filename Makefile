@@ -13,8 +13,8 @@ install-base:
 install-docker:
 	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-docker.yml
 	docker run --rm hello-world
-install-cuda:
-	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-cuda.yml
+install-nvidia-driver:
+	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-nvidia-driver.yml
 	docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 show-ansible:
 	cat /etc/ansible/hosts
