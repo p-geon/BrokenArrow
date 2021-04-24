@@ -1,4 +1,6 @@
 # bash_aliases
+alias ba="cd ~/BrokenArrow/"
+
 alias A="cat ~/.bash_aliases"
 alias S="A | grep"
 
