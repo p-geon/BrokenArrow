@@ -10,7 +10,7 @@
           - gnupg
           - lsb-release
     - name: install docker
-      script: /home/ubuntu/BrokenArrow/ansible/scripts/install-docker.sh
+      script: /home/ubuntu/git/BrokenArrow/ansible/scripts/install-docker.sh
     - name: install docker-compose
       apt:
         pkg:

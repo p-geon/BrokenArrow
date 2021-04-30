@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ESC=$(printf '\033')
 echo "${ESC}[36m__________                __                     _____                              
 \______   \_______  ____ |  | __ ____   ____    /  _  \______________  ______  _  __
@@ -12,7 +14,7 @@ echo "${ESC}[36m__________                __                     _____
 
  if [ "$HEADHASH" != "$UPSTREAMHASH" ]
  then
-   echo -e ${ERROR}[bash_syncer] Not up to date with origin.${NOCOLOR}
+   echo -e ${ERROR}[BrokenArrow] Not up to date with origin.${NOCOLOR}
    echo
    git pull origin main
    exit 0

@@ -7,4 +7,4 @@
           - ubuntu-drivers-common
           - nvidia-driver-440
     - name: install nvidia-container-toolkit 2
-      script: /home/ubuntu/BrokenArrow/ansible/scripts/setup-nvctoolkit.sh
+      script: /home/ubuntu/git/BrokenArrow/ansible/scripts/setup-nvctoolkit.sh

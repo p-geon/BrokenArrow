@@ -26,7 +26,6 @@ run-gpu:
 initialize:
 	-cp -r template/.config ~/.config
 	-cp -r template/.ssh ~/.ssh
-	-cp -r template/git ~/git
 	-cp -r template/pigeon ~/pigeon
 	-cp template/.bash_aliases ~/.bash_aliases
 	-cp template/.bash_profile ~/.bash_profile
