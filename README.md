@@ -13,21 +13,26 @@ stabilized-ML envoronment creation
 ## install 
 
 ```
+# 1. clone
 mkdir git && cd git
 git clone https://github.com/p-geon/BrokenArrow.git && cd BrokenArrow
 
-# copy dotfiles
+# 3. copy dotfiles
 make initialize
 
-## about 3min (in 4core AWS-p2inst.)
+# 3. initialize / about 3min
 ./setup.sh
 
-## about 1-2min (in 4core AWS-p2inst.)
+# 4. base / about 1-2min
 make install-base
-# 
+
+# 5. docker / about 4-5min
 make install-docker
+sudo usermod -aG docker `whoami`
+
+# 6. nvidia-driver / about 5-10min
 make install-nvidia-driver
-# ↑ needs reboot
+sudo reboot
 ```
 
 ## environments
