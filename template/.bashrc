@@ -111,11 +111,28 @@ cdls ()
 }
 
 alias cd="cdls"
+
+# =========================================
+## hook command: tmux
+tmuxplit ()
+{
+	if [ $1 = "railload" ]; then
+	tmux
+	tmux split-window -h
+	tmux select-pane -t 1
+	else
+	tmux
+	fi
+}
+
+alias tmux="tmuxplit"
+
 # ==========================================
 ## exclude evil editor "NANO"
 export EDITOR=vim
 
 # path to customized bins
-PATH="$PATH":~/BrokenArrow/bin/
+PATH="$PATH":~/git/BrokenArrow/bin/
+PATH="$PATH":~/git/BrokenArrow/bin/split/
 
 echo "[loaded] ~/.bashrc"
