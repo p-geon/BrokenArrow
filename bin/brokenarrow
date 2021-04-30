@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ~/git/BrokenArrow/
+
 ESC=$(printf '\033')
 echo "${ESC}[36m__________                __                     _____                              
 \______   \_______  ____ |  | __ ____   ____    /  _  \______________  ______  _  __
@@ -21,3 +23,5 @@ echo "${ESC}[36m__________                __                     _____
  else
    echo -e ${FINISHED}[bash_syncer] Current branch is up to date with origin/main.${NOCOLOR}
  fi
+
+ cd -
