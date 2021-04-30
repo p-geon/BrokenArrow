@@ -26,6 +26,10 @@ run-gpu:
 initialize:
 	-cp -r template/.config ~/.config
 	-cp -r template/.ssh ~/.ssh
+	-chmod 600 ~/.ssh/contents
+	-cp -r template/.kaggle ~/.kaggle
+	-chmod 600 ~/.kaggle/kaggle.json
+	-cp -r template/data ~/data
 	-cp -r template/pigeon ~/pigeon
 	-cp template/.bash_aliases ~/.bash_aliases
 	-cp template/.bash_profile ~/.bash_profile

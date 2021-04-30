@@ -17,7 +17,7 @@ stabilized-ML envoronment creation
 mkdir git && cd git
 git clone https://github.com/p-geon/BrokenArrow.git && cd BrokenArrow
 
-# 3. copy dotfiles
+# 2. copy dotfiles
 make initialize
 
 # 3. initialize / about 3min
@@ -35,14 +35,30 @@ make install-nvidia-driver
 sudo reboot
 ```
 
-## environments
+## hidden files
+
+```
+vim ~/.kaggle/kaggle.json
+vim ~/.ssh/contents
+```
+
+## Kaggle API
+
+```
+sudo apt install -y python3-pip
+pip3 install kaggle --upgrade
+```
+
+## TODO 
+
+environments
 
 - onpre: `TODO`
 - on AWS: `Ubuntu Server 20.04 LTS (HVM), SSD Volume Type`
 - any cluster: `TODO`
 
 
-## TODO
+tmux
 
 - tmux
   - [ ] tmux-plugin
