@@ -13,15 +13,21 @@ stabilized-ML envoronment creation
 ## install 
 
 ```
-git clone https://github.com/p-geon/BrokenArrow.git
-cd BrokenArrow
-./setup.py
+mkdir git && cd git
+git clone https://github.com/p-geon/BrokenArrow.git && cd BrokenArrow
 
-# 5-10min in 4core AWS-p2inst.
+# copy dotfiles
+make initialize
+
+## about 3min (in 4core AWS-p2inst.)
+./setup.sh
+
+## about 1-2min (in 4core AWS-p2inst.)
 make install-base
 # 
 make install-docker
 make install-nvidia-driver
+# ↑ needs reboot
 ```
 
 ## environments
