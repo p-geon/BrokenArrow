@@ -26,6 +26,6 @@ fi
 # =========================================
 # activate BrokenAllow whan loading .bash_profile
 # =========================================
-sh brokenarrow
+bash brokenarrow
 
 echo "[loaded] ~/.bash_profile"
