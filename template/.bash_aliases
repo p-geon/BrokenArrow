@@ -2,6 +2,7 @@
 alias ba="cd ~/BrokenArrow/"
 
 alias A="cat ~/.bash_aliases"
+alias B="cd ~/git/BrokenArrow/"
 alias S="A | grep"
 
 alias RR="source ~/.bashrc"
