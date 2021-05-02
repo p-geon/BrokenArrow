@@ -5,7 +5,3 @@ alias ZZ="source ~/.zshrc"
 # editor
 alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code -r"
 alias vscode="vs"
-
-# server
-alias tf="conda activate tf"
-alias sr="srun -p p --gres=gpu:1"

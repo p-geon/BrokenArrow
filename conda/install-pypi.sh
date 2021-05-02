@@ -16,8 +16,8 @@ conda install cudatoolkit=11.0
 conda install -c nvidia cudnn # 8.0
 
 # CUDA 10.1 cuDNN 7.6.5
-pip install tensorflow-gpu==2.3# →古いCPUだとコアダンプする
-conda install cudatoolkit=10.1
+pip install tensorflow-gpu==2.3.1 # →古いCPUだとコアダンプする。いや、しないのか？
+conda install cudatoolkit=10.1 # もともとあればいらない
 conda install cudnn=7.6.5=cuda10.1_0
 
 # General Purpose (about 3min)

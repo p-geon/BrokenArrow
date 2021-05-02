@@ -12,5 +12,5 @@ conda create -n tf python=3.8
 conda activate tf
 
 # delete env
-conda deactivate tf
+conda deactivate
 conda remove -n tf --all

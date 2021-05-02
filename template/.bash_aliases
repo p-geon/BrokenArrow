@@ -27,7 +27,9 @@ alias pw="pwd"
 
 # cd variant
 alias ~="cd ~/"
+alias .="ls"
 alias ..="cd ../"
+alias ../="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
