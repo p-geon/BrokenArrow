@@ -49,6 +49,14 @@ sudo apt install -y python3-pip
 pip3 install kaggle --upgrade
 ```
 
+
+## http to ssh (for push)
+
+```
+git remote set-url origin git@github.com:p-geon/BrokenArrow.git
+```
+
+
 ## TODO 
 
 environments

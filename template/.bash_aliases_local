@@ -1,0 +1,7 @@
+alias RR="source ~/.bashrc"
+alias ZZ="source ~/.zshrc"
+alias SET="cp bash/.bash_aliases ~/.bash_aliases && reload"
+
+# editor
+alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code -r"
+alias vscode="vs"
