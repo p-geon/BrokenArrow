@@ -1,4 +1,3 @@
-echo "[loading] ~/.bashrc"
 # ==========================================
 # default bashrc
 # ==========================================
@@ -12,6 +11,9 @@ case $- in
     *i*) ;;
       *) return;;
 esac
+
+# scp needs locate this
+echo "[loading] ~/.bashrc"
 
 HISTCONTROL=ignoreboth
 shopt -s histappend
