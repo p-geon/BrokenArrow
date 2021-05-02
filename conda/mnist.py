@@ -25,7 +25,6 @@ class Model:
 
 		self.model = self.build_model()
 		self.model.compile(optimizer='adam', metrics=['accuracy'], loss='sparse_categorical_crossentropy')
-		tf.keras.utils.plot_model(self.model, to_file='model.png', show_shapes=True)
 
 
 	def build_model(self):

@@ -10,3 +10,7 @@ conda info -e
 # activate
 conda create -n tf python=3.8
 conda activate tf
+
+# delete env
+conda deactivate tf
+conda remove -n tf --all

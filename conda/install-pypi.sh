@@ -7,6 +7,9 @@
 ## -> tensorboard 
 ## -> scipy
 
+# AVX
+pip intstall tensorflow==2.4.1
+
 # CUDA 11.0 cuDNN 8.0
 conda install -c anaconda tensorflow-gpu # 2.4
 conda install cudatoolkit=11.0
