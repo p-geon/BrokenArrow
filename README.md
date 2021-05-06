@@ -79,3 +79,15 @@ tmux
 - [ ] miniconda
 - [ ] direnv 
 - [ ] zsh
+
+## for mac
+
+```
+TBD
+```
+
+## for Ubuntu
+
+```
+TBD
+```
