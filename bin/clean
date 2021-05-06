@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ## as reference: https://github.com/moskomule/.dotfiles/blob/master/bin/docker-cleaner
 
@@ -8,12 +8,17 @@ clean_images() {
         docker rmi $unnecessary
     fi
 }
+
 clean_containers() {
     unnecessary=$(docker ps -aq)
     if [[ $unnecessary != "" ]]; then
-        docker rm $unnecessary
+        docker stop $unnecessary
     fi
 }
 
-clean_containers()
-clean_images()
+
+clean_containers
+clean_images
+
+docker images
+docker ps -a
