@@ -145,7 +145,7 @@ alias c="clear"
 alias reload="exec bash -l"
 alias G="grep"
 alias p="pwd"
-
+alias sd360="sudo shutdown -h +360"
 
 # pytorch/GPU
 alias gpucheck_pytorch="python -c 'import torch;print(torch.cuda.is_available(), torch.cuda.device_count());'"

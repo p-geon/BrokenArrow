@@ -21,6 +21,8 @@ echo "${ESC}[36m__________                __                     _____
    git pull origin main
    cp ${HOME}/git/BrokenAllow/template/.bash_aliases ${HOME}/./bash_aliases
    echo "[copied] ~/.bash_aliases"
+   cp ${HOME}/git/BrokenAllow/template/.bash_profile ${HOME}/./bash_profile
+   echo "[copied] ~/.bash_profile"
    exit 0
  else
    echo -e ${FINISHED}[bash_syncer] Current branch is up to date with origin/main.${NOCOLOR}

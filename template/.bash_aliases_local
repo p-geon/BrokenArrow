@@ -5,3 +5,7 @@ alias ZZ="source ~/.zshrc"
 # editor
 alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code -r"
 alias vscode="vs"
+
+
+# server
+alias srm="rm slurm-*.out"
