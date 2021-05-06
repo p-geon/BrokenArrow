@@ -10,6 +10,11 @@ stabilized-ML envoronment creation
 - `Docker`
 
 
+## BrokenArrow
+
+check latest commit & pull it, re-cover **'~/.bash_profile'** & **'~/.bash_aliases'**
+
+
 ## install 
 
 ```
@@ -18,10 +23,10 @@ mkdir git && cd git
 git clone https://github.com/p-geon/BrokenArrow.git && cd BrokenArrow
 
 # 2. copy dotfiles
-make initialize
+./setup.sh
 
 # 3. initialize / about 3min
-./setup.sh
+make initialize
 
 # 4. base / about 1-2min
 make install-base
