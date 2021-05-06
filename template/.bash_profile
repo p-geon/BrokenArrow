@@ -28,4 +28,27 @@ fi
 # =========================================
 bash brokenarrow
 
+# =========================================
+## hook command: cd -> cd + ls
+cdls ()
+{
+  \cd "$@" && pwd && tree -L 1 ./
+}
+
+# cat as ccat
+colorcat ()
+{
+	\ccat "$@" && echo ""
+}
+
+alias cd="cdls"
+alias cat="colorcat"
+# ==========================================
+## exclude evil editor "NANO"
+export EDITOR=vim
+# ==========================================
+## override python
+alias python="python3"
+# ==========================================
+
 echo "[loaded] ~/.bash_profile"
