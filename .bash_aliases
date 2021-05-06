@@ -6,24 +6,27 @@ alias S="A | grep"
 alias RRR="UPDATE && reload"
 
 
-
 # exa
-alias ls='exa --group-directories-first --color=auto --icons'
+alias ls="exa --group-directories-first --color=auto --icons"
+alias T="exa -T --color=auto --icons"
 ## show Directory
 alias Td="tree -d -L 2 ./"
 alias T1d="tree -d -L 1 ./"
 alias T2d="tree -d -L 2 ./"
 alias T3d="tree -d -L 3 ./"
-alias T="tree -L 2 ./"
 alias T1="tree -L 1 ./"
 alias T2="tree -L 2 ./"
 alias T3="tree -L 3 ./"
 alias TT="tree -d -L 2 ~/"
 alias TTT="tree -d -L 3 ~/"
-
-alias lla="ls -la"
-alias llb="ls -la ../"
-alias lll="ls -l | wc -l"
+# some more ls aliases
+alias l='ls'
+alias ll='ls -l'
+alias lt='ls -T'
+#alias lt="ls -lt"
+#alias lx="ls -Xl"
+alias sl="l"
+alias lln="ls -l | wc -n" # counting file amount
 alias dud="du -d 2 -m"
 alias pw="pwd"
 
@@ -32,7 +35,7 @@ alias pw="pwd"
 alias ~="cd ~/"
 alias .="ls"
 alias ..="cd ../"
-alias ../="cd ../"
+# alias ../="cd ../" # invalid
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
@@ -41,18 +44,7 @@ alias .2="cd ../../"
 alias .3="cd ../../../"
 alias .4="cd ../../../../"
 alias .5="cd ../../../../../"
-
 alias b="cd -"
-
-
-# some more ls aliases
-alias l='ls -CF'
-alias ll='ls -alF'
-alias la='ls -A'
-alias lt="ls -lt"
-alias lx="ls -Xl"
-alias sl="l"
-alias lln="ll | wc -n" # counting file amount
 
 
 # tmux

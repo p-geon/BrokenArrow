@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cp ${HOME}/git/BrokenArrow/.bash_aliases ${HOME}/.bash_aliases
+echo "[copied] ~/.bash_aliases"
+cp ${HOME}/git/BrokenArrow/.bash_profile ${HOME}/.bash_profile
+echo "[copied] ~/.bash_profile"
+source ~/.bashrc
