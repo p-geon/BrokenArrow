@@ -8,6 +8,10 @@ install-all:
 	make install-docker
 	make install-nvidia-driver
 
+install-brew:
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	brew bundle
+
 install-base:
 	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-base.yml
 install-docker:
@@ -24,15 +28,20 @@ run-gpu:
 
 # root files
 initialize:
+	@echo "copy .config, .ssh"
 	-cp -r template/.config ~/.config
 	-cp -r template/.ssh ~/.ssh
 	-chmod 600 ~/.ssh/contents
+	@echo "copy kaggle files"
 	-cp -r template/.kaggle ~/.kaggle
 	-chmod 600 ~/.kaggle/kaggle.json
+	@echo "copy dirs"
 	-cp -r template/data ~/data
 	-cp -r template/pigeon ~/pigeon
-	-cp template/.bash_aliases ~/.bash_aliases
-	-cp template/.bash_profile ~/.bash_profile
-	-cp template/.bashrc ~/.bashrc
+	@echo "copy .tmux.conf, .vimrc"
 	-cp template/.tmux.conf ~/.tmux.conf
 	-cp template/.vimrc ~/.vimrc
+	@echo "copy bash files"
+	-cp .bash_aliases ~/.bash_aliases
+	-cp .bash_profile ~/.bash_profile
+	-cp .bashrc ~/.bashrc

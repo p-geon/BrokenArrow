@@ -6,7 +6,10 @@ alias S="A | grep"
 alias RRR="UPDATE && reload"
 
 
-# show Directory
+
+# exa
+alias ls='exa --group-directories-first --color=auto --icons'
+## show Directory
 alias Td="tree -d -L 2 ./"
 alias T1d="tree -d -L 1 ./"
 alias T2d="tree -d -L 2 ./"
