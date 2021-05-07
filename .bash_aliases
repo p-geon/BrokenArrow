@@ -1,15 +1,28 @@
-# bash_aliases
+# --------------------
+# bash
+# --------------------
 alias ba="cd ~/BrokenArrow/"
 alias B="cd ~/git/BrokenArrow/"
 alias A="cat ~/.bash_aliases"
 alias S="A | grep"
 alias RRR="UPDATE && reload"
 
-
+# --------------------
 # exa
+# --------------------
 alias ls="exa --group-directories-first --color=auto --icons"
+alias l="ls"
+alias sl="ls"
+alias ll="ls -l"
+alias la="ls -la"
+alias lt="ls -T"
 alias T="exa -T --color=auto --icons"
-## show Directory
+alias n="ls -l | wc -n"
+alias p="pwd"
+
+# --------------------
+# tree
+# --------------------
 alias Td="tree -d -L 2 ./"
 alias T1d="tree -d -L 1 ./"
 alias T2d="tree -d -L 2 ./"
@@ -19,19 +32,10 @@ alias T2="tree -L 2 ./"
 alias T3="tree -L 3 ./"
 alias TT="tree -d -L 2 ~/"
 alias TTT="tree -d -L 3 ~/"
-# some more ls aliases
-alias l='ls'
-alias ll='ls -l'
-alias lt='ls -T'
-#alias lt="ls -lt"
-#alias lx="ls -Xl"
-alias sl="l"
-alias lln="ls -l | wc -n" # counting file amount
-alias dud="du -d 2 -m"
-alias pw="pwd"
 
-
+# --------------------
 # cd variant
+# --------------------
 alias ~="cd ~/"
 alias .="ls"
 alias ..="cd ../"
@@ -47,7 +51,9 @@ alias .5="cd ../../../../../"
 alias b="cd -"
 
 
+# --------------------
 # tmux
+# --------------------
 alias tmux.cs="cat ~/.tmux.conf | grep bind"
 alias t="tmux"
 alias ta="tmux a"
@@ -56,11 +62,14 @@ alias tk="tmux kill-server"
 
 # make support
 alias h="make help"
+alias mh="make help"
+alias b="make b"
+alias mb="make b"
 
-
+# --------------------
 # git
+# --------------------
 alias g="git"
-
 ## add
 alias gadry="git add -A --dry-run" #pre-check without adding
 alias ga="git add"
@@ -102,7 +111,9 @@ alias gcl="git config --list"
 ## stash
 alias gswap="git stash -u && git checkout -b swap && git stash pop"
 
-
+# --------------------
+# Docker
+# --------------------
 # Docker
 alias d="docker"
 alias di="docker images"
@@ -112,7 +123,9 @@ alias drmi="docker images -f dangling=true -q | xargs docker rmi -f"
 alias dstop="docker ps -a -q | xargs docker rm -f"
 alias dclean="dstop && drmi"
 
-
+# --------------------
+# the others
+# --------------------
 # watch
 alias wn="watch -n 2.0 nvidia-smi"
 
@@ -122,9 +135,11 @@ alias ps-python="ps aux | grep python"
 alias ci="conda info -e"
 alias ip="ipython"
 alias denva="direnv allow ."
+alias sat="source activate tf"
 
 
 # specific
+alias dud="du -d 2 -m"
 alias heavy-search="du -ah ./ | sort -rh | head -5"
 
 
