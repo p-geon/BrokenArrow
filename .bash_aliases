@@ -1,11 +1,10 @@
 # --------------------
 # bash
 # --------------------
-alias ba="cd ~/BrokenArrow/"
+alias ba="cd ~/git/BrokenArrow/"
 alias B="cd ~/git/BrokenArrow/"
 alias A="cat ~/.bash_aliases"
 alias S="A | grep"
-alias RRR="UPDATE && reload"
 
 # --------------------
 # exa
@@ -18,11 +17,8 @@ alias la="ls -la"
 alias lt="ls -T"
 alias T="exa -T --color=auto --icons"
 alias n="ls -l | wc -n"
-alias p="pwd"
+alias pw="pwd"
 
-# --------------------
-# tree
-# --------------------
 alias Td="tree -d -L 2 ./"
 alias T1d="tree -d -L 1 ./"
 alias T2d="tree -d -L 2 ./"
@@ -49,22 +45,6 @@ alias .3="cd ../../../"
 alias .4="cd ../../../../"
 alias .5="cd ../../../../../"
 alias b="cd -"
-
-
-# --------------------
-# tmux
-# --------------------
-alias tmux.cs="cat ~/.tmux.conf | grep bind"
-alias t="tmux"
-alias ta="tmux a"
-alias tk="tmux kill-server"
-
-
-# make support
-alias h="make help"
-alias mh="make help"
-alias b="make b"
-alias mb="make b"
 
 # --------------------
 # git
@@ -126,6 +106,13 @@ alias dclean="dstop && drmi"
 # --------------------
 # the others
 # --------------------
+# make support
+alias h="make help"
+alias mh="make help"
+alias b="make b"
+alias mb="make b"
+
+
 # watch
 alias wn="watch -n 2.0 nvidia-smi"
 
