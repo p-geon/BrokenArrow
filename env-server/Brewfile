@@ -1,0 +1,3 @@
+brew "ccat"
+brew "exa"
+brew "tree"

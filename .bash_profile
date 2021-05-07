@@ -34,6 +34,18 @@ fi
 
 
 # =========================================
+# aliases
+# =========================================
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_aliases_local ]; then
+    . ~/.bash_aliases_local
+fi
+
+
+# =========================================
 # activate BrokenAllow whan loading .bash_profile
 # =========================================
 bash brokenarrow
