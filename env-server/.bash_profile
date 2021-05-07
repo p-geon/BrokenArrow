@@ -34,7 +34,7 @@ fi
 # =========================================
 # activate BrokenAllow whan loading .bash_profile
 # =========================================
-bash brokenarrow
+#bash brokenarrow
 
 # =========================================
 ## hook command: cd -> cd + ls
