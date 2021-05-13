@@ -15,6 +15,20 @@ esac
 # scp needs locate this
 echo "[loading] ~/.bashrc"
 
+# =========================================
+# aliases
+# =========================================
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_aliases_local ]; then
+    . ~/.bash_aliases_local
+fi
+
+# =========================================
+# settings
+# =========================================
 HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=1000

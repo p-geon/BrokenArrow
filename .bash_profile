@@ -1,7 +1,7 @@
 echo "[loading] ~/.bash_profile"
 
 # =========================================
-# bash
+# bash / zsh
 # =========================================
 ## if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -10,9 +10,6 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
-# =========================================
-# zsh
-# =========================================
 ## if running zsh
 if [ -n "$ZSH_VERSION" ]; then
     # include .zshrc if it exists
@@ -20,7 +17,9 @@ if [ -n "$ZSH_VERSION" ]; then
     . "$HOME/.zshrc"
     fi
 fi
-
+# =========================================
+# path
+# =========================================
 ## set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -31,19 +30,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 #endl
-
-
-# =========================================
-# aliases
-# =========================================
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-if [ -f ~/.bash_aliases_local ]; then
-    . ~/.bash_aliases_local
-fi
-
 
 # =========================================
 # activate BrokenAllow whan loading .bash_profile

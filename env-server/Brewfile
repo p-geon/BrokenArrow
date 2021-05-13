@@ -1,3 +1,4 @@
 brew "ccat"
 brew "exa"
+brew "bat"
 brew "tree"
