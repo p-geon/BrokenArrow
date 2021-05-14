@@ -9,6 +9,7 @@ alias S="A | grep"
 # --------------------
 # exa
 # --------------------
+alias lllll="ls"
 alias ls="exa --group-directories-first --color=auto --icons"
 alias l="ls"
 alias sl="ls"
