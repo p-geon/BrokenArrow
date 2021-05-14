@@ -114,11 +114,6 @@ alias mh="make help"
 alias b="make b"
 alias mb="make b"
 
-
-# watch
-alias wn="watch -n 2.0 nvidia-smi"
-
-
 ## Python
 alias ps-python="ps aux | grep python"
 alias ci="conda info -e"
@@ -126,16 +121,13 @@ alias ip="ipython"
 alias denva="direnv allow ."
 alias sat="source activate tf"
 
-
 # specific
 alias dud="du -d 2 -m"
 alias heavy-search="du -ah ./ | sort -rh | head -5"
 
-
 # OS-utils
 alias show-architecture="uname -moi"
 alias show-os="cat /etc/os-release"
-
 
 # basic-commands
 alias a="alias"
@@ -149,3 +141,8 @@ alias sd360="sudo shutdown -h +360"
 # pytorch/GPU
 alias gpucheck_pytorch="python -c 'import torch;print(torch.cuda.is_available(), torch.cuda.device_count());'"
 alias gpucheck_tensorflow="python -c 'import tensorflow as tf;tf.test.is_gpu_available()'"
+
+# watch command
+alias wt="watch -n 10.0 tree -d -L 3"
+alias wn="watch -n 2.0 nvidia-smi --query-gpu=temperature.gpu,utilization.gpu,memory.used,memory.free  --format=csv"
+alias wnf="watch -n 2.0 nvidia-smi"
