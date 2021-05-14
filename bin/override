@@ -1,11 +1,13 @@
 #!/bin/bash
 
-cp ${HOME}/git/BrokenArrow/.bash_aliases ${HOME}/.bash_aliases
+export dir_dotfiles=${HOME}/git/BrokenArrow/dotfiles
+
+cp ${dir_dotfiles}/.bash_aliases ${HOME}/.bash_aliases
 echo "[copied] ~/.bash_aliases"
-cp ${HOME}/git/BrokenArrow/.bash_profile ${HOME}/.bash_profile
+cp ${dir_dotfiles}/BrokenArrow/.bash_profile ${HOME}/.bash_profile
 echo "[copied] ~/.bash_profile"
-cp ${HOME}/git/BrokenArrow/.zprofile ${HOME}/.zprofile
+cp ${dir_dotfiles}/.zprofile ${HOME}/.zprofile
 echo "[copied] ~/.zprofile"
-cp ${HOME}/git/BrokenArrow/.zshrc ${HOME}/.zshrc
+cp ${dir_dotfiles}/.zshrc ${HOME}/.zshrc
 echo "[copied] ~/.zshrc"
 source ~/.bashrc

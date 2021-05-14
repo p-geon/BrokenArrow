@@ -19,7 +19,7 @@ echo "${ESC}[36m__________                __                     _____
    echo -e ${ERROR}[BrokenArrow] Not up to date with origin.${NOCOLOR}
    echo
    git pull origin main
-   ./override
+   override
    exit 0
  else
    echo -e ${FINISHED}[bash_syncer] Current branch is up to date with origin/main.${NOCOLOR}

@@ -21,7 +21,7 @@ install-nvidia-driver:
 	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-nvidia-driver.yml
 	echo "needs restart"
 
-export DIR_DOTFILES=./dotfiles/
+export DIR_DOTFILES=./dotfiles
 copy-dotfiles:
 	@echo "copy bash files"
 	-cp $(DIR_DOTFILES)/bash_profile ~/.bash_profile
