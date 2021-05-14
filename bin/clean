@@ -5,14 +5,14 @@
 clean_images() {
     unnecessary=$(docker images -f "dangling=true" -q)
     if [[ $unnecessary != "" ]]; then 
-        docker rmi $unnecessary
+        docker rmi $unnecessary -f
     fi
 }
 
 clean_containers() {
-    unnecessary=$(docker ps -aq)
+    unnecessary=$(docker ps -a -q)
     if [[ $unnecessary != "" ]]; then
-        docker stop $unnecessary
+        docker rm -f $unnecessary
     fi
 }
 

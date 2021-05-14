@@ -52,6 +52,7 @@ alias b="cd -"
 # git
 # --------------------
 alias g="git"
+alias gaccount="git config user.name && git config user.email"
 ## add
 alias gadry="git add -A --dry-run" #pre-check without adding
 alias ga="git add"

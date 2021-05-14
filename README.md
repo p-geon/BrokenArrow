@@ -35,8 +35,8 @@ make initialize
 cd docker
 make install-base
 make install-docker
+sudo usermod -aG docker `whoami`
 sudo reboot
-#sudo usermod -aG docker `whoami`
 make install-nvidia-driver
 sudo reboot
 ```
