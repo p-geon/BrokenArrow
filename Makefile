@@ -20,28 +20,22 @@ install-docker:
 install-nvidia-driver:
 	sudo ansible-playbook -i /etc/ansible/hosts ansible/install-nvidia-driver.yml
 	echo "needs restart"
-show-ansible:
-	cat /etc/ansible/hosts
+
+export DIR_DOTFILES=./dotfiles/
+copy-dotfiles:
+	@echo "copy bash files"
+	-cp $(DIR_DOTFILES)/bash_profile ~/.bash_profile
+	-cp $(DIR_DOTFILES)/bashrc ~/.bashrc
+	-cp $(DIR_DOTFILES)/bash_aliases ~/.bash_aliases
+	@echo "copy zsh files"
+	-cp $(DIR_DOTFILES)/zprofile ~/.zprofile
+	-cp $(DIR_DOTFILES)/zshrc ~/.zshrc
+	@echo 'other dot files'
+	-cp $(DIR_DOTFILES)/.tmux.conf ~/.tmux.conf
+	-cp $(DIR_DOTFILES)/.vimrc ~/.vimrc
+
 
 run-gpu:
 	docker run --rm tensorflow/tensorflow:2.3.2-gpu nvidia-smi
-
-# root files
-initialize:
-	@echo "copy .config, .ssh"
-	-cp -r template/.config ~/.config
-	-cp -r template/.ssh ~/.ssh
-	-chmod 600 ~/.ssh/contents
-	@echo "copy kaggle files"
-	-cp -r template/.kaggle ~/.kaggle
-	-chmod 600 ~/.kaggle/kaggle.json
-	@echo "copy dirs"
-	-cp -r template/data ~/data
-	-cp -r template/pigeon ~/pigeon
-	@echo "copy .tmux.conf, .vimrc"
-	-cp template/.tmux.conf ~/.tmux.conf
-	-cp template/.vimrc ~/.vimrc
-	@echo "copy bash files"
-	-cp .bash_aliases ~/.bash_aliases
-	-cp .bash_profile ~/.bash_profile
-	-cp .bashrc ~/.bashrc
+show-ansible:
+	cat /etc/ansible/hosts

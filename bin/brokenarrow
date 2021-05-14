@@ -19,14 +19,7 @@ echo "${ESC}[36m__________                __                     _____
    echo -e ${ERROR}[BrokenArrow] Not up to date with origin.${NOCOLOR}
    echo
    git pull origin main
-   cp ${HOME}/git/BrokenArrow/.bash_aliases ${HOME}/.bash_aliases
-   echo "[copied] ~/.bash_aliases"
-   cp ${HOME}/git/BrokenArrow/.bash_profile ${HOME}/.bash_profile
-   echo "[copied] ~/.bash_profile"
-   cp ${HOME}/git/BrokenArrow/.zprofile ${HOME}/.zprofile
-   echo "[copied] ~/.zprofile"
-   cp ${HOME}/git/BrokenArrow/.zshrc ${HOME}/.zshrc
-   echo "[copied] ~/.zshrc"
+   ./override
    exit 0
  else
    echo -e ${FINISHED}[bash_syncer] Current branch is up to date with origin/main.${NOCOLOR}
