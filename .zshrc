@@ -1,9 +1,9 @@
-# scp needs locate this
-echo "[loading] ~/.zshrc"
-
 # 色を使用
 autoload -Uz colors
 colors
+
+# scp needs locate this
+echo "[loading] ~/.zshrc"
 
 # 補完
 # autoload -Uz compinit
