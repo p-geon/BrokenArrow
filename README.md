@@ -27,15 +27,16 @@ git clone https://github.com/p-geon/BrokenArrow.git && cd BrokenArrow
 
 # 3. initialize / about 3min
 make initialize
+```
 
-# 4. base / about 1-2min
+## install docker + nvidia-driver
+
+```
+cd docker
 make install-base
-
-# 5. docker / about 4-5min
 make install-docker
-sudo usermod -aG docker `whoami`
-
-# 6. nvidia-driver / about 5-10min
+sudo reboot
+#sudo usermod -aG docker `whoami`
 make install-nvidia-driver
 sudo reboot
 ```
@@ -69,10 +70,6 @@ environments
 - onpre: `TODO`
 - on AWS: `Ubuntu Server 20.04 LTS (HVM), SSD Volume Type`
 - any cluster: `TODO`
-
-
-tmux
-
 - tmux
   - [ ] tmux-plugin
   - [ ] blocking in tmux for imgcat

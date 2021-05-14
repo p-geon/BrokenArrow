@@ -1,5 +1,13 @@
 echo "[loading] ~/.bash_profile"
 
+# path to customized bins
+PATH="$PATH":~/git/BrokenArrow/bin/
+PATH="$PATH":~/git/BrokenArrow/bin/split/
+
+# if ubuntu with brew
+PATH=$PATH:/home/linuxbrew/.linuxbrew/bin # cluster
+PATH=$PATH:/home/ubuntu/.linuxbrew/bin # AWS
+
 # =========================================
 # bash / zsh
 # =========================================

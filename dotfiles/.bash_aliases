@@ -5,6 +5,7 @@ alias ba="cd ~/git/BrokenArrow/"
 alias B="cd ~/git/BrokenArrow/"
 alias A="cat ~/.bash_aliases"
 alias S="A | grep"
+alias T="cp ~/git/BrokenArrow/dotfiles/.bashrc ~/.bashrc"
 
 # --------------------
 # exa

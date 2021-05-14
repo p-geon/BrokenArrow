@@ -90,12 +90,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# path to customized bins
-PATH="$PATH":~/git/BrokenArrow/bin/
-PATH="$PATH":~/git/BrokenArrow/bin/split/
 
-# if ubuntu with brew
-PATH=$PATH:/home/linuxbrew/.linuxbrew/bin # cluster
-PATH=$PATH:/home/ubuntu/.linuxbrew/bin # AWS
 
 echo "[loaded] ~/.bashrc"
