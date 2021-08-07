@@ -37,7 +37,6 @@ alias TTT="tree -d -L 3 ~/"
 alias ~="cd ~/"
 alias .="ls"
 alias ..="cd ../"
-# alias ../="cd ../" # invalid
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
@@ -46,7 +45,7 @@ alias .2="cd ../../"
 alias .3="cd ../../../"
 alias .4="cd ../../../../"
 alias .5="cd ../../../../../"
-alias b="cd -"
+alias ,="cd -"
 
 # --------------------
 # git
@@ -71,6 +70,8 @@ alias gpl="git pull origin main"
 alias gp="git push"
 alias main="git push origin main"
 alias master="git push origin master"
+alias defaultmain="git config --global init.defaultBranch main"
+alias master2main="git branch -m master main && git push -u origin main"
 alias gacp="git add -A && git commit -m 'update' && git push origin main"
 
 ## branch

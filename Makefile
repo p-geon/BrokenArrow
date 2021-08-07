@@ -8,10 +8,11 @@ install-brew:
 
 export DIR_DOTFILES=./dotfiles
 copy-dotfiles:
-	@echo "copy bash files"
-	-cp $(DIR_DOTFILES)/bash_profile ~/.bash_profile
-	-cp $(DIR_DOTFILES)/bashrc ~/.bashrc
-	-cp $(DIR_DOTFILES)/bash_aliases ~/.bash_aliases
+	@echo "overwrite bash files"
+	rm ~/.bashrc ~/.bash_profile ~/.bash_aliases
+	cp $(DIR_DOTFILES)/bash_profile ~/.bash_profile
+	cp $(DIR_DOTFILES)/bashrc ~/.bashrc
+	cp $(DIR_DOTFILES)/bash_aliases ~/.bash_aliases
 	@echo "copy zsh files"
 	-cp $(DIR_DOTFILES)/zprofile ~/.zprofile
 	-cp $(DIR_DOTFILES)/zshrc ~/.zshrc

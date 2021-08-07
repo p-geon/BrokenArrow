@@ -1,6 +1,11 @@
 #!/bin/bash
+version='0.1.0'
 
 cd ~/git/BrokenArrow/
+
+git fetch
+HEADHASH=$(git rev-parse HEAD)
+UPSTREAMHASH=$(git rev-parse main@{upstream})
 
 ESC=$(printf '\033')
 echo "${ESC}[36m__________                __                     _____                              
@@ -10,19 +15,20 @@ echo "${ESC}[36m__________                __                     _____
  |______  / |__|   \____/|__|_ \\___  >___|  /\____|__  /__|   |__|   \____/ \/\_/  
         \/                    \/    \/     \/         \/                            ${ESC}[m"
 
- git fetch
- HEADHASH=$(git rev-parse HEAD)
- UPSTREAMHASH=$(git rev-parse main@{upstream})
+ESC=$(printf '\033')
+echo "${ESC}[33m                                                                   version: ${version} ${ESC}[m"
+echo "- HASH: ${HEADHASH}"
 
- if [ "$HEADHASH" != "$UPSTREAMHASH" ]
- then
-   echo -e ${ERROR}[BrokenArrow] Not up to date with origin.${NOCOLOR}
-   echo
-   git pull origin main
-   override
-   exit 0
- else
-   echo -e ${FINISHED}[bash_syncer] Current branch is up to date with origin/main.${NOCOLOR}
- fi
 
- cd -
+if [ "$HEADHASH" != "$UPSTREAMHASH" ]
+then
+  echo -e ${ERROR}[BrokenArrow] Not up to date with origin.${NOCOLOR}
+  echo
+  git pull origin main
+  override
+  exit 0
+else
+  echo -e ${FINISHED}[bash_syncer] Current branch is up to date with origin/main.${NOCOLOR}
+fi
+
+cd -
